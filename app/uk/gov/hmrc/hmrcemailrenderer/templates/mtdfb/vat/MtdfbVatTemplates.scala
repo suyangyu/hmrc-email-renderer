@@ -41,6 +41,24 @@ object MtdfbVatTemplates {
       plainTemplate = txt.principal_sign_up_failure.f,
       htmlTemplate = html.principal_sign_up_failure.f,
       priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "mtdfb_vat_agent_sign_up_successful",
+      fromAddress = FromAddress.noReply("Use software to submit your client's VAT Returns"),
+      service = MTDfBVatSignUp,
+      subject = "Use software to submit your client's VAT Returns",
+      plainTemplate = txt.agent_sign_up_successful.f,
+      htmlTemplate = html.agent_sign_up_successful.f,
+      priority = Some(MessagePriority.Urgent)
+    ),
+    MessageTemplate.create(
+      templateId = "mtdfb_vat_agent_sign_up_failure",
+      fromAddress = FromAddress.noReply("Use software to submit your client's VAT Returns"),
+      service = MTDfBVatSignUp,
+      subject = "Use software to submit your client's VAT Returns",
+      plainTemplate = txt.agent_sign_up_failure.f,
+      htmlTemplate = html.agent_sign_up_failure.f,
+      priority = Some(MessagePriority.Urgent)
     )
   )
 
